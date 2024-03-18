@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:0.application/CryptoPulse.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:1.sdks/0.view/CryptoView.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:1.sdks/1.core/CryptoCore.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:1.sdks/2.network/CryptoNetwork.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:1.sdks/3.utilities/CryptoUtilities.xcodeproj">
+   </FileRef>
+</Workspace>
