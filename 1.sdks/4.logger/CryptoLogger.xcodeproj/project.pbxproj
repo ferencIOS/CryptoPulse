@@ -7,137 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		130B9F8A2BA9D60900225D24 /* CryptoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130B9F892BA9D60900225D24 /* CryptoDetails.swift */; };
-		130B9F8C2BA9D61500225D24 /* CryptoDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130B9F8B2BA9D61500225D24 /* CryptoDetailsService.swift */; };
-		130C56842BA48EDF0040DEF9 /* CryptoNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 130C56832BA48EDF0040DEF9 /* CryptoNetwork.framework */; };
-		133E7FC92BA48E2B0036F83F /* CryptoCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 133E7FC82BA48E2B0036F83F /* CryptoCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13DE3BAA2BA94497005F0771 /* CryptoListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE3BA92BA94497005F0771 /* CryptoListService.swift */; };
-		13DE3BAC2BA944E0005F0771 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE3BAB2BA944E0005F0771 /* Crypto.swift */; };
+		130747EA2934C8EF00CF59BB /* CryptoLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 130747E92934C8EF00CF59BB /* CryptoLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		130747F22934C95400CF59BB /* CryptoLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130747F02934C95400CF59BB /* CryptoLog.swift */; };
+		13BF6FF72BA057260046B057 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13BAB4C62BA0535A0080B1DB /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		130B9F892BA9D60900225D24 /* CryptoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetails.swift; sourceTree = "<group>"; };
-		130B9F8B2BA9D61500225D24 /* CryptoDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsService.swift; sourceTree = "<group>"; };
-		130C56832BA48EDF0040DEF9 /* CryptoNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		133E7FC52BA48E2B0036F83F /* CryptoCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		133E7FC82BA48E2B0036F83F /* CryptoCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoCore.h; sourceTree = "<group>"; };
-		13DE3BA92BA94497005F0771 /* CryptoListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListService.swift; sourceTree = "<group>"; };
-		13DE3BAB2BA944E0005F0771 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		130747E62934C8EF00CF59BB /* CryptoLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		130747E92934C8EF00CF59BB /* CryptoLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CryptoLogger.h; sourceTree = "<group>"; };
+		130747F02934C95400CF59BB /* CryptoLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoLog.swift; sourceTree = "<group>"; };
+		13BAB4C62BA0535A0080B1DB /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		133E7FC22BA48E2B0036F83F /* Frameworks */ = {
+		130747E32934C8EF00CF59BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				130C56842BA48EDF0040DEF9 /* CryptoNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		130B9F882BA9D5F900225D24 /* details */ = {
+		130747DC2934C8EE00CF59BB = {
 			isa = PBXGroup;
 			children = (
-				130B9F8B2BA9D61500225D24 /* CryptoDetailsService.swift */,
-				130B9F892BA9D60900225D24 /* CryptoDetails.swift */,
-			);
-			path = details;
-			sourceTree = "<group>";
-		};
-		130C56822BA48EDF0040DEF9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				130C56832BA48EDF0040DEF9 /* CryptoNetwork.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		133E7FBB2BA48E2B0036F83F = {
-			isa = PBXGroup;
-			children = (
-				133E7FC72BA48E2B0036F83F /* CryptoCore */,
-				133E7FC62BA48E2B0036F83F /* Products */,
-				130C56822BA48EDF0040DEF9 /* Frameworks */,
+				130747E82934C8EF00CF59BB /* CryptoLoggerSDK */,
+				130747E72934C8EF00CF59BB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		133E7FC62BA48E2B0036F83F /* Products */ = {
+		130747E72934C8EF00CF59BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				133E7FC52BA48E2B0036F83F /* CryptoCore.framework */,
+				130747E62934C8EF00CF59BB /* CryptoLogger.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		133E7FC72BA48E2B0036F83F /* CryptoCore */ = {
+		130747E82934C8EF00CF59BB /* CryptoLoggerSDK */ = {
 			isa = PBXGroup;
 			children = (
-				133E7FC82BA48E2B0036F83F /* CryptoCore.h */,
-				13DE3BA82BA94477005F0771 /* list */,
-				130B9F882BA9D5F900225D24 /* details */,
+				130747E92934C8EF00CF59BB /* CryptoLogger.h */,
+				130747F02934C95400CF59BB /* CryptoLog.swift */,
+				13BAB4C62BA0535A0080B1DB /* PrivacyInfo.xcprivacy */,
 			);
-			path = CryptoCore;
-			sourceTree = "<group>";
-		};
-		13DE3BA82BA94477005F0771 /* list */ = {
-			isa = PBXGroup;
-			children = (
-				13DE3BA92BA94497005F0771 /* CryptoListService.swift */,
-				13DE3BAB2BA944E0005F0771 /* Crypto.swift */,
-			);
-			path = list;
+			path = CryptoLoggerSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		133E7FC02BA48E2B0036F83F /* Headers */ = {
+		130747E12934C8EF00CF59BB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				133E7FC92BA48E2B0036F83F /* CryptoCore.h in Headers */,
+				130747EA2934C8EF00CF59BB /* CryptoLogger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		133E7FC42BA48E2B0036F83F /* CryptoCore */ = {
+		130747E52934C8EF00CF59BB /* CryptoLogger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 133E7FCC2BA48E2B0036F83F /* Build configuration list for PBXNativeTarget "CryptoCore" */;
+			buildConfigurationList = 130747ED2934C8EF00CF59BB /* Build configuration list for PBXNativeTarget "CryptoLogger" */;
 			buildPhases = (
-				133E7FC02BA48E2B0036F83F /* Headers */,
-				133E7FC12BA48E2B0036F83F /* Sources */,
-				133E7FC22BA48E2B0036F83F /* Frameworks */,
-				133E7FC32BA48E2B0036F83F /* Resources */,
+				130747E12934C8EF00CF59BB /* Headers */,
+				130747E22934C8EF00CF59BB /* Sources */,
+				130747E32934C8EF00CF59BB /* Frameworks */,
+				130747E42934C8EF00CF59BB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CryptoCore;
-			productName = CryptoCore;
-			productReference = 133E7FC52BA48E2B0036F83F /* CryptoCore.framework */;
+			name = CryptoLogger;
+			productName = CustomLoggerSDK;
+			productReference = 130747E62934C8EF00CF59BB /* CryptoLogger.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		133E7FBC2BA48E2B0036F83F /* Project object */ = {
+		130747DD2934C8EE00CF59BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					133E7FC42BA48E2B0036F83F = {
-						CreatedOnToolsVersion = 15.3;
-						LastSwiftMigration = 1530;
+					130747E52934C8EF00CF59BB = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
-			buildConfigurationList = 133E7FBF2BA48E2B0036F83F /* Build configuration list for PBXProject "CryptoCore" */;
+			buildConfigurationList = 130747E02934C8EE00CF59BB /* Build configuration list for PBXProject "CryptoLogger" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -145,42 +111,40 @@
 				en,
 				Base,
 			);
-			mainGroup = 133E7FBB2BA48E2B0036F83F;
-			productRefGroup = 133E7FC62BA48E2B0036F83F /* Products */;
+			mainGroup = 130747DC2934C8EE00CF59BB;
+			productRefGroup = 130747E72934C8EF00CF59BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				133E7FC42BA48E2B0036F83F /* CryptoCore */,
+				130747E52934C8EF00CF59BB /* CryptoLogger */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		133E7FC32BA48E2B0036F83F /* Resources */ = {
+		130747E42934C8EF00CF59BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13BF6FF72BA057260046B057 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		133E7FC12BA48E2B0036F83F /* Sources */ = {
+		130747E22934C8EF00CF59BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13DE3BAA2BA94497005F0771 /* CryptoListService.swift in Sources */,
-				130B9F8C2BA9D61500225D24 /* CryptoDetailsService.swift in Sources */,
-				13DE3BAC2BA944E0005F0771 /* Crypto.swift in Sources */,
-				130B9F8A2BA9D60900225D24 /* CryptoDetails.swift in Sources */,
+				130747F22934C95400CF59BB /* CryptoLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		133E7FCA2BA48E2B0036F83F /* Debug */ = {
+		130747EB2934C8EF00CF59BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,11 +179,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -234,19 +198,18 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		133E7FCB2BA48E2B0036F83F /* Release */ = {
+		130747EC2934C8EF00CF59BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -285,7 +248,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -294,22 +257,23 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		133E7FCD2BA48E2B0036F83F /* Debug */ = {
+		130747EE2934C8EF00CF59BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -327,8 +291,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fs.crypto.core;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fs.crypto.logger;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -336,18 +300,18 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		133E7FCE2BA48E2B0036F83F /* Release */ = {
+		130747EF2934C8EF00CF59BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -365,8 +329,8 @@
 				);
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fs.crypto.core;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fs.crypto.logger;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -374,34 +338,33 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		133E7FBF2BA48E2B0036F83F /* Build configuration list for PBXProject "CryptoCore" */ = {
+		130747E02934C8EE00CF59BB /* Build configuration list for PBXProject "CryptoLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				133E7FCA2BA48E2B0036F83F /* Debug */,
-				133E7FCB2BA48E2B0036F83F /* Release */,
+				130747EB2934C8EF00CF59BB /* Debug */,
+				130747EC2934C8EF00CF59BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		133E7FCC2BA48E2B0036F83F /* Build configuration list for PBXNativeTarget "CryptoCore" */ = {
+		130747ED2934C8EF00CF59BB /* Build configuration list for PBXNativeTarget "CryptoLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				133E7FCD2BA48E2B0036F83F /* Debug */,
-				133E7FCE2BA48E2B0036F83F /* Release */,
+				130747EE2934C8EF00CF59BB /* Debug */,
+				130747EF2934C8EF00CF59BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 133E7FBC2BA48E2B0036F83F /* Project object */;
+	rootObject = 130747DD2934C8EE00CF59BB /* Project object */;
 }

@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import CryptoUtilities
+import CryptoLogger
 
 /// Built-in Content Types
 public enum ContentType: String {
@@ -314,7 +315,7 @@ public struct UnknownError: Error {
 
 extension UnknownError: LocalizedError {
     public var errorDescription: String? {
-        return "error_unknown".localized
+        return "unknown error"
     }
 }
 
@@ -332,7 +333,7 @@ public struct NoDataError: Error {
 
 extension NoDataError: LocalizedError {
     public var errorDescription: String? {
-        return "error_network_no_data".localized
+        return "no data error"
     }
 }
 
@@ -357,7 +358,7 @@ public struct WrongStatusCodeError: Error {
 
 extension WrongStatusCodeError: LocalizedError {
     public var errorDescription: String? {
-        return "error_network_wrong_status_code".localized([statusCode.description, response?.description ?? ""])
+        return "wrong status code error - [\(statusCode.description), \(response?.description ?? "")]"
     }
 }
 
@@ -366,6 +367,28 @@ extension WrongStatusCodeError: CryptoUtilities.Indexable {
         return "ERR-NTW-003"
     }
     
+}
+
+extension URLRequest {
+    /// Returns a cURL command for a request
+    var curlString: String {
+        guard let url = self.url else { return "" }
+        var baseCommand = "curl \(url.absoluteString)"
+        
+        if self.httpMethod == "POST" {
+            baseCommand += " -X POST"
+        }
+        
+        for (headerField, headerValue) in self.allHTTPHeaderFields ?? [:] {
+            baseCommand += " -H \"\(headerField): \(headerValue)\""
+        }
+        
+        if let httpBody = self.httpBody, let httpBodyString = String(data: httpBody, encoding: .utf8) {
+            baseCommand += " -d '\(httpBodyString)'"
+        }
+        
+        return baseCommand
+    }
 }
 
 extension URLSession {
@@ -430,10 +453,35 @@ extension URLSession {
     /// - Returns: The parsed `A` value specified in `Endpoint`
     public func load<A>(_ e: Endpoint<A>) async throws -> A {
         let request = e.request
+
+        var message = """
+        
+---------
+        
+cURL:
+\(request.curlString)
+"""
         let (data, resp) = try await self.data(for: request)
         guard let h = resp as? HTTPURLResponse else {
             throw UnknownError()
         }
+        
+        message += """
+        
+Response HTTP Status code: \(h.statusCode)
+"""
+        if h.mimeType == "application/json" {
+            message += """
+        
+Response data: \(String(data: data, encoding: .utf8) ?? "")
+
+---------
+"""
+        }
+        
+        let logger = CryptoLog()
+        logger.debug(message)
+        
         guard e.expectedStatusCode(h.statusCode) else {
             throw WrongStatusCodeError(statusCode: h.statusCode, response: h, responseBody: data)
         }

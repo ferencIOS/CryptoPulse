@@ -46,11 +46,12 @@ extension CoinGeckoService {
 
     public func fetchMarketDetails(request: MarketDetailsRequest) async throws -> MarketDetailsResponse {
         let url = URL(string: "\(CoinGeckoAPI.baseURL)\(CoinGeckoAPICall.coins)/\(request.id)")!
+        let queryItems = try request.asURLQueryItems(excluding: ["id"])
         
         let endpoint = Endpoint<MarketDetailsResponse>(
             json: .get,
             url: url,
-            queryItems: []
+            queryItems: queryItems
         )
         
         return try await session.load(endpoint)
@@ -61,8 +62,8 @@ extension CoinGeckoService {
 
     public func fetchMarketChart(request: MarketChartRequest) async throws -> MarketChartResponse {
         let url = URL(string: "\(CoinGeckoAPI.baseURL)\(CoinGeckoAPICall.coins)/\(request.id)/market_chart")!
-        let queryItems = try request.asURLQueryItems()
-        
+        let queryItems = try request.asURLQueryItems(excluding: ["id"])
+
         let endpoint = Endpoint<MarketChartResponse>(
             json: .get,
             url: url,
