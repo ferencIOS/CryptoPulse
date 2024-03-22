@@ -32,12 +32,11 @@
  */
 
 import SwiftUI
+import CryptoView
 
 @main
 struct CryptoPulseApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+        CryptoScene()
     }
 }

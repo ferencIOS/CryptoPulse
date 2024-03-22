@@ -20,7 +20,7 @@ public struct MarketsRequest: Codable {
         order: String = "market_cap_desc",
         perPage: Int = 10,
         page: Int = 1,
-        sparkline: Bool = false,
+        sparkline: Bool = true,
         locale: String = "en"
     ) {
         self.currency = currency

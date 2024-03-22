@@ -16,4 +16,7 @@
    <FileRef
       location = "group:1.sdks/3.utilities/CryptoUtilities.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:/Users/francesco/Develop/Github/CryptoPulse/1.sdks/4.logger/CryptoLogger.xcodeproj">
+   </FileRef>
 </Workspace>
