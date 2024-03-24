@@ -24,7 +24,8 @@ For a comprehensive walkthrough of CryptoPulse's features and functionality, ple
 
 1. Clone the repository to your local machine.
 2. Open `crypto-pulse.xcworkspace` in Xcode.
-3. To run on a simulator, select an iPhone 15 (or newer) from the target device list.
+3. Select `CryptoPulse` scheme.
+4. To run on a simulator, select an iPhone 15 (or newer) from the target device list.
 
 **Note**: If you wish to run the app on a physical device, you will need to modify the `Bundle Identifier` and `Team` to match your provisioning profile.
 

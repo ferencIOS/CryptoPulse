@@ -270,7 +270,6 @@ extension CryptoDetailsView {
     let crypto = Crypto(id: "bitcoin", currency: "EUR", name: "Bitcoin", symbol: "BTC", imageUrl: URL(string: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png")!, currentPrice: "€30,000", priceChangePercentage24H: "-500.32%")
     let service = MockCryptoDetailsService()
     //        let service = CryptoDetailsService()
-    let listViewModel = CryptoListViewModel()
     let viewModel = CryptoDetailsViewModel(crypto: crypto, cryptoDetailsService: service)
     return CryptoDetailsView(viewModel: viewModel)
         .previewLayout(.sizeThatFits)
